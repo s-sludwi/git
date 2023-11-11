@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referenzen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	    background-color: #B21D31;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+	    box-shadow: 0px 0px 5px rgba(0, 0, 0.1);
+        }
+
+        header img {
+	    width: 100px;
+	    height: auto;
+	    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+	    transition: transform 0.2s ease-in-out;
+        }
+
+	header img:hover {
+		transform: scale(1.1); 
+	}
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            color: #e0e0e0;
+        }
+
+        .reference {
+            margin-bottom: 20px;
+        }
+
+        .reference h2 {
+            color: #c7374a;
+        }
+
+        .reference p {
+            color: #555;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+	<div class="dropdown" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+	    <a href="https://www.haw-landshut.de/" target="_blank">
+	        <img src="landshut_logo.jpg" alt="Logo">
+	    </a>
+	    <div class="dropdown-content">
+	        <a href="#">Link 1</a>
+	        <a href="#">Link 2</a>
+	        <a href="#">Link 3</a>
+	    </div>
+	</div>
+        <div>
+            <h1>Hochschule Landshut</h1>
+            <p>Hochschule für angewandte Wissenschaften</p>
+        </div>
+    </header>
+
+    <h1> Referenzen</h1>
+
+    <div class="reference">
+        <h2>Quelle 1</h2>
+        <p>Ansprechpartner: John Doe</p>
+        <p>Telefon: (123) 456-7890</p>
+        <p>Email: john.doe@example.com</p>
+    </div>
+
+    <div class="reference">
+        <h2>Kontakt</h2>
+        <p>Ansprechpartner: Stephanie Ludwig</p>
+        <p>Studiengang: Ingenieurpsychologie (B.Sc.)</p>
+	<p>Modul: Ausgewählte Kapitel der Ingenieurpsychologie</p>
+        <p>Email: s-sludwi@haw-landshut.de</p>
+    </div>
+
+    <div class="reference">
+        <h2>Kontakt</h2>
+        <p>Ansprechpartner: Stephanie Ludwig</p>
+        <p>Studiengang: Ingenieurpsychologie (B.Sc.)</p>
+	<p>Modul: Ausgewählte Kapitel der Ingenieurpsychologie</p>
+        <p>Email: s-sludwi@haw-landshut.de</p>
+    </div>
+
+    <script>
+        function showDropdown() {
+            document.querySelector('.dropdown-content').style.display = 'block';
+        }
+
+        function hideDropdown() {
+            document.querySelector('.dropdown-content').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
